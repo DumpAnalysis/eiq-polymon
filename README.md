@@ -6,7 +6,7 @@ The software can be used for various threat monitoring and forensic purposes on 
 
 # Installation (or Upgrade)
 
-Download the **PolyMon_Setup.exe** or clone the repository. The software can be installed by right click and 'Run as Administrator' on the binary executable. The current version is supported only on Windows 10 x64 Platform.
+Download the **PolyMon_Setup.exe** or clone the repository. The software can be installed by right click and 'Run as Administrator' on the binary executable. The current version is supported only on Windows 10/11 x64 Platform.
 
 ![setup](https://user-images.githubusercontent.com/75771864/210490541-e75d1fc6-2838-4201-a40f-a25189231bdf.png)
 
