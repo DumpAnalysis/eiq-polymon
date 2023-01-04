@@ -9,39 +9,39 @@ The software can be used for various threat monitoring and forensic purposes on 
 Download the **PolyMon_Setup.exe** or clone the repository. The software can be installed by right click and 'Run as Administrator' on the binary executable. The current version is supported only on Windows 10 x64 Platform.
 
 ![setup](https://user-images.githubusercontent.com/75771864/210490541-e75d1fc6-2838-4201-a40f-a25189231bdf.png)
-  
-![install-wel](https://user-images.githubusercontent.com/75771864/210490801-b1cd831c-4d9e-4d68-9c47-fabf0280c234.png)
+
+![install-wel-4 0](https://user-images.githubusercontent.com/75771864/210521278-7e417f47-2d83-44f6-b8a6-e5d9c7730938.png)
 
 The setup wizard guides through the rest of the process.
 
-![install-wiz](https://user-images.githubusercontent.com/75771864/210490846-54005fec-17f1-4ae5-87e6-6d27ea1078a1.png)
+![install-wiz-4 0](https://user-images.githubusercontent.com/75771864/210521307-a10ffa84-1210-4d66-8e1d-dad285bb2cb8.png)
 
 You can choose to install Everything tool for Desktop Search feature (selected by default via checkbox).
 If you choose not to install Everything tool for Desktop Search feature, the "Desktop Search" feature will remain DISABLED and cannot be ENABLED later.
 
-![install-desktop-search](https://user-images.githubusercontent.com/75771864/210490886-7bb0f13a-43b2-4fc7-b6e2-e2c47761a703.PNG)
+![install-desktop-search-4 0](https://user-images.githubusercontent.com/75771864/210521354-8ef520fd-7c39-490c-b21c-57c3e47ef820.PNG)
 
 The tool can be provisioned with an optional [VirusTotal](https://www.virustotal.com/) free API key. Provisioning with VirusTotal key allows the tool to fetch the reputation of file hashes automatically from it and alert in case a malicious (or supicious) detection. API key can be later added or modified after install also.
 
-![install-vt](https://user-images.githubusercontent.com/75771864/210490923-95f5cfde-230a-45f6-9d79-9d8dfa608faf.png)
+![install-vt-4 0](https://user-images.githubusercontent.com/75771864/210521427-03837532-ece3-4209-b5b7-39b7d3b415e9.png)
 
 At the end of the installation, the monitoring agent registers as a tray app and gets launched. Later you can close the tool window (it will keep running as tray app) or maximize the tool window by clicking on tray icon.
 
-![install-complete](https://user-images.githubusercontent.com/75771864/210490977-b24bf1cf-8f7c-47f2-b1f8-7376d6344aeb.png)
+![install-complete-4 0](https://user-images.githubusercontent.com/75771864/210521504-8db685eb-1ab5-49b0-9053-333587407243.png)
 
-![tray-icon](https://user-images.githubusercontent.com/75771864/210491006-d3e0b793-b9c8-423e-89fe-81942eed6706.png)
+![tray-icon-4 0](https://user-images.githubusercontent.com/75771864/210521538-4dfacbd6-d919-4644-b777-ad93c2fb7626.png)
 
-![options_about](https://user-images.githubusercontent.com/75771864/210491036-dbd7580d-cd1e-47ea-ab43-5e77eb4a2095.png)
+![options_about-4 0](https://user-images.githubusercontent.com/75771864/210521577-27f9ff5b-ef17-4ce9-b45b-4547cde5b835.png)
 
 # Configuration
 
 PolyMon is built with a default set of configurations for the underlying osquery agent as well as the [EclecticIQ Extension](https://github.com/eclecticiq/osq-ext-bin). This provides an extremely low touch experience for the end user. The advanced users who wish to view/edit the configuration can do so by launching the PolyMon's front end application as shown below.
 
-![mon-config](https://user-images.githubusercontent.com/75771864/210491076-ed595032-4952-49c8-9815-0fe887c7102e.png)
+![mon-config-4 0](https://user-images.githubusercontent.com/75771864/210521688-0c731b38-953f-4e37-b4df-dce17a8a2090.png)
 
 PolyMon configuration follows the similar syntax as provided for EclecticIQ Extension and osquery. 
 
-![mon-config2](https://user-images.githubusercontent.com/75771864/210491088-22ece3be-97fa-4be0-9609-1b4593ae319e.png)
+![mon-config2-4 0](https://user-images.githubusercontent.com/75771864/210521727-4a2109f5-1b1c-4fe2-9715-06fe28ce7bcd.png)
 
 # Use cases 
 
@@ -51,19 +51,19 @@ PolyMon tool can be used for a variety of use cases.
 
 Under the hood, the PolyMon tool leverages a combination of technologies to record, query and display these activities. The most important use case is to provide a view into the activities of your system that are often not visible to naked eyes. These activities provide interesting insights for a system which can be used to root cause issues like a system breach, application misbehavior or any other unwarranted activity. Additionally, the tool can be utilized to query the properties of an endpoint. Each type of activity (or endpoint property) is provided under a tab that describes the type of activity. Each tab is a wrapper on a table provided by osquery core agent or EclecticIQ Extension. The default tabs are the 'activity monitoring' tabs. These activities include "File Events", "Process Events", "DNS Lookup", "HTTP Events" among others. The "search" box and the options on the right pane can assist with filtering the data for customizing the views.
 
-![proc-events](https://user-images.githubusercontent.com/75771864/210491125-967e613a-6dd5-4f3f-8e65-54be31f8d940.png)
+![proc-events-4 0](https://user-images.githubusercontent.com/75771864/210521788-ee975b74-b910-4611-94cd-8ffbf9740409.png)
 
-![dns-events](https://user-images.githubusercontent.com/75771864/210491242-1bab79ae-f6c9-417a-9351-9ae7c9e201a3.png)
+![dns-events-4 0](https://user-images.githubusercontent.com/75771864/210521841-da3753e1-cff8-4345-aec2-888b3de47ed5.png)
 
 If the tool was provisioned with VirusTotal key, it would look up the reputation of file hashes from VirusTotal database, maintaining a rate quota associated with free API keys, and trigger an alert on a match found. 
 
 ![mon-data-vt-red](https://user-images.githubusercontent.com/75771864/210491275-a2008db0-453f-44c6-a9a9-2e5200995ed9.png)
 
-![tray-notif](https://user-images.githubusercontent.com/75771864/210491294-3f3b3909-587f-400e-8863-552e10d60ed5.png)
+![tray-notif-4 0](https://user-images.githubusercontent.com/75771864/210521963-b0f5db77-033a-4e1b-bd61-368e814c92d3.png)
 
 The alert notifications can be turned off (or on) from the menu in the tray app. A global search option allows to look for a particular files hash as collected by the PolyMon agent. 
 
-![tray-notif-manage](https://user-images.githubusercontent.com/75771864/210491313-311cfa4c-a745-4c19-96f5-9d5bb1a84157.png)
+![tray-notif-manage-4 0](https://user-images.githubusercontent.com/75771864/210522002-8eee9c6f-7bca-496d-8d5c-a8902caa6323.png)
 
 Please keep in the mind that PolyMon DOES NOT index the entire disk. File hashes for only those file events as configured in the 'Configuration' are captured in the PolyMon. For file hashes of already resident files, the 'query' option as shown in the next section can be utilized. 
 
@@ -71,7 +71,7 @@ Please keep in the mind that PolyMon DOES NOT index the entire disk. File hashes
 
 For the advanced osquery users, the tool can act as graphical front end (much like the osqueyi shell) and can be used to send custom SQL queries on various osquery tables. 
 
-![mon-osquery2](https://user-images.githubusercontent.com/75771864/210491355-e64e9186-3fbe-43e7-8a98-55819332f096.png)
+![mon-osquery2-4 0](https://user-images.githubusercontent.com/75771864/210522150-cf2d5d63-6700-4ac1-83c8-fa808b088ab3.png)
 
 ## Endpoint Profiling 
 
@@ -81,20 +81,28 @@ A combination of osquery queries are clubbed together to generate an endpoint pr
 
 The generated endpoint profile can be viewed as the HTML document.
 
-![mon-profile-htm](https://user-images.githubusercontent.com/75771864/210491398-7f01f0fd-6416-45e7-a6a4-310e2e3854ab.png)
+![mon-profile-htm-4 0](https://user-images.githubusercontent.com/75771864/210522242-ef587901-f1c8-4d1c-b4ff-b5cb457de56b.png)
 
 # New features and enhancements in v4.0.0.0
 
 ## System health monitoring with health display via riskmeter 
 
 The tool constantly monitors system health based on a set of 15 parameters, shows health parameter status as "GOOD" or "NOT GOOD" and shows 
-an overall system health via riskmeter. It also allows for exporting system health report for further analysis. The health report data having 
+an overall system health via riskmeter. 
+
+![health-monitor-4 0](https://user-images.githubusercontent.com/75771864/210519527-9fda9bd5-be6f-49d6-9c76-b1423aac6f80.JPG)
+
+It also allows for exporting system health report for further analysis. The health report data having 
 md5 hashes of files or services is highlighted in RED with VirusTotal hyperlink if the hash is found to be malicious via VirusTotal lookup.  
  
+![health-monitor-htm-4 0](https://user-images.githubusercontent.com/75771864/210520334-97809ef4-e3f0-4e29-94b8-d1e97e191f8f.JPG)
+
 ## CIS benchmarking and reporting
   
 The tool can be used to do CIS benchmark analysis of the system on more than 500 benchmarks. Also, the benchmark report
 can be exported in csv format for further analysis.
+
+![cis-4 0](https://user-images.githubusercontent.com/75771864/210520691-14f10aa9-7d32-4b0c-86c0-960a704a40e0.JPG)
    
 ## Osquery service updated to version 5.2.2
 
@@ -102,14 +110,13 @@ plgx_osqueryd.exe service, the osquery daemon shipped with PolyMon is now update
 
 ## New tables added in osquery 5.2.2 and EclecticIQ extension are added in dropdown list for "Other Tables"
 
-![osquery-table](https://user-images.githubusercontent.com/75771864/210491435-29bc8cc6-e536-4d5b-a0a2-af232c6311a4.png)
-
 All tables (without constraints) recently added by osquery (supported only on Windows) in 5.2.2 version have been updated in the list. 
+
+![osquery-table-4 0](https://user-images.githubusercontent.com/75771864/210520984-15d24ae9-6d8a-4ae1-a0bb-84200ea35983.png)
 
 ## Rebranding to EclecticIQ PolyMon
 
 The tool is updated with EclecticIQ logo, license and copyright info. 
-
 
 # New features and enhancements in v1.0.40.6
 
@@ -186,11 +193,11 @@ This poses some bit of limitations if the Everything tool was installed outside 
 
 PolyMon can be uninstalled by removing the software from 'Programs and Features' or "Add/Remove" menu of the Windows control panel. 
 
-![uninstall-1](https://user-images.githubusercontent.com/75771864/210491774-daa6a88d-b03b-4ad1-b41f-b7c7889677f6.png)
+![uninstall-1-4 0](https://user-images.githubusercontent.com/75771864/210523749-49b3fec4-0b30-457d-8fa3-262f99a126de.png)
 
-![uninstall-2](https://user-images.githubusercontent.com/75771864/210491801-889dc8d1-f46a-470d-9318-8f4290834253.png)
+![uninstall-2-4 0](https://user-images.githubusercontent.com/75771864/210523768-e7fdf61c-7908-4906-bb7b-12e04bf11fd3.png)
 
-![uninstall-3](https://user-images.githubusercontent.com/75771864/210491814-b19e3246-79a0-4cf1-96a7-222be4c8f9ca.png)
+![uninstall-3-4 0](https://user-images.githubusercontent.com/75771864/210523786-a41f86a5-0a1d-4a69-9931-3d982bebe4b5.png)
 
 Note: During uninstall, PolyMon will stop Everything service (and remove the service if Everything tool was installed with PolyMon).
 Though the installer tries to cleanup all the files in case of failure, if it doesn't you can run polymon_cleanup.bat from command prompt with admin privileges to cleanup the installed files.
