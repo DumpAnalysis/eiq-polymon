@@ -57,7 +57,7 @@ Under the hood, the PolyMon tool leverages a combination of technologies to reco
 
 If the tool was provisioned with VirusTotal key, it would look up the reputation of file hashes from VirusTotal database, maintaining a rate quota associated with free API keys, and trigger an alert on a match found. 
 
-![mon-data-vt-red](https://user-images.githubusercontent.com/75771864/210491275-a2008db0-453f-44c6-a9a9-2e5200995ed9.png)
+![mon-data-vt-red-4 0](https://user-images.githubusercontent.com/75771864/210524823-ed30480d-dcc5-4037-8374-c938935df032.png)
 
 ![tray-notif-4 0](https://user-images.githubusercontent.com/75771864/210521963-b0f5db77-033a-4e1b-bd61-368e814c92d3.png)
 
