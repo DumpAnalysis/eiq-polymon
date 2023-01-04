@@ -1,6 +1,6 @@
 # Introduction 
 
-PolyLogyx Monitoring Agent (PolyMon) is a Windows software that leverages the [osquery](https://osquery.io/) tool and the PolyLogyx Extension to osquery, to provide a view into detailed information about process creations, network connections, file system changes and many other activities on the system. For a detailed list of activities captured [check here](https://github.com/polylogyx/osq-ext-bin)
+EclecticIQ PolyMon is a Windows software that leverages the [osquery](https://osquery.io/) tool and the EclecticIQ Extension to osquery, to provide a view into detailed information about process creations, network connections, file system changes and many other activities on the system. For a detailed list of activities captured [check here](https://github.com/eclecticiq/osq-ext-bin)
 
 The software can be used for various threat monitoring and forensic purposes on a standalone system and does not mandate burden of having a server to manage the agents. It provides a graphical user interface that allows a user to navigate through the activities and events happening on the endpoint device.
 
@@ -21,7 +21,7 @@ If you choose not to install Everything tool for Desktop Search feature, the "De
 
 ![Installation_2.5](Images/install-desktop-search.PNG)
 
-The tool can be provisioned with an optional [VirusTotal](https://www.virustotal.com/) free API key. Provisioning with VirusTotal key allows the tool to fetch the reputation of file hashes automatically from it and alert in case a malicious (or supicious) detection. (available on Install only)
+The tool can be provisioned with an optional [VirusTotal](https://www.virustotal.com/) free API key. Provisioning with VirusTotal key allows the tool to fetch the reputation of file hashes automatically from it and alert in case a malicious (or supicious) detection. API key can be later added or modified after install also.
 
 ![Installation_3](Images/install-vt.png)
 
@@ -35,11 +35,11 @@ At the end of the installation, the monitoring agent registers as a tray app and
 
 # Configuration
 
-PolyMon is built with a default set of configurations for the underlying osquery agent as well as the [PolyLogyx Extension](https://github.com/polylogyx/osq-ext-bin). This provides an extremely low touch experience for the end user. The advanced users who wish to view/edit the configuration can do so by launching the PolyMon's front end application as shown below.
+PolyMon is built with a default set of configurations for the underlying osquery agent as well as the [EclecticIQ Extension](https://github.com/eclecticiq/osq-ext-bin). This provides an extremely low touch experience for the end user. The advanced users who wish to view/edit the configuration can do so by launching the PolyMon's front end application as shown below.
 
 ![Configuration](Images/mon-config.png)
 
-PolyMon configuration follows the similar syntax as provided for PolyLogyx Extension and osquery. 
+PolyMon configuration follows the similar syntax as provided for EclecticIQ Extension and osquery. 
 
 ![Configuration2](Images/mon-config2.png)
 
@@ -49,7 +49,7 @@ PolyMon tool can be used for a variety of use cases.
 
 ## Detection and monitoring
 
-Under the hood, the PolyMon tool leverages a combination of technologies to record, query and display these activities. The most important use case is to provide a view into the activities of your system that are often not visible to naked eyes. These activities provide interesting insights for a system which can be used to root cause issues like a system breach, application misbehavior or any other unwarranted activity. Additionally, the tool can be utilized to query the properties of an endpoint. Each type of activity (or endpoint property) is provided under a tab that describes the type of activity. Each tab is a wrapper on a table provided by osquery core agent or PolyLogyx Extension. The default tabs are the 'activity monitoring' tabs. These activities include "File Events", "Process Events", "DNS Lookup", "HTTP Events" among others. The "search" box and the options on the right pane can assist with filtering the data for customizing the views.
+Under the hood, the PolyMon tool leverages a combination of technologies to record, query and display these activities. The most important use case is to provide a view into the activities of your system that are often not visible to naked eyes. These activities provide interesting insights for a system which can be used to root cause issues like a system breach, application misbehavior or any other unwarranted activity. Additionally, the tool can be utilized to query the properties of an endpoint. Each type of activity (or endpoint property) is provided under a tab that describes the type of activity. Each tab is a wrapper on a table provided by osquery core agent or EclecticIQ Extension. The default tabs are the 'activity monitoring' tabs. These activities include "File Events", "Process Events", "DNS Lookup", "HTTP Events" among others. The "search" box and the options on the right pane can assist with filtering the data for customizing the views.
 
 ![ProcEvents](Images/proc-events.png)
 
@@ -83,7 +83,35 @@ The generated endpoint profile can be viewed as the HTML document.
 
 ![EProfileOut](Images/mon-profile-htm.png)
 
-# New features and enhancements over previous release
+# New features and enhancements in v4.0.0.0
+
+## System health monitoring with health display via riskmeter 
+
+The tool constantly monitors system health based on a set of 15 parameters, shows health parameter status as "GOOD" or "NOT GOOD" and shows 
+an overall system health via riskmeter. It also allows for exporting system health report for further analysis. The health report data having 
+md5 hashes of files or services is highlighted in RED with VirusTotal hyperlink if the hash is found to be malicious via VirusTotal lookup.  
+ 
+## CIS benchmarking and reporting
+  
+The tool can be used to do CIS benchmark analysis of the system on more than 500 benchmarks. Also, the benchmark report
+can be exported in csv format for further analysis.
+   
+## Osquery service updated to version 5.2.2
+
+plgx_osqueryd.exe service, the osquery daemon shipped with PolyMon is now updated to version 5.2.2. 
+
+## New tables added in osquery 5.2.2 and EclecticIQ extension are added in dropdown list for "Other Tables"
+
+![OsqueryTableExample](Images/osquery-table.png)
+
+All tables (without constraints) recently added by osquery (supported only on Windows) in 5.2.2 version have been updated in the list. 
+
+## Rebranding to EclecticIQ PolyMon
+
+The tool is updated with EclecticIQ logo, license and copyright info. 
+
+
+# New features and enhancements in v1.0.40.6
 
 ## Integration with Everything tool (https://www.voidtools.com/) to enable Desktop Search for files and get file hashes.
 
@@ -97,7 +125,7 @@ Just browse any location and provide file name, then click "Export". This combin
 as well as names and folder locations. Everything tool is bundled with PolyMon and will get automatically installed. 
 This poses some bit of limitations if the Everything tool was installed outside of PolyMon. Please check the **FAQ** section to understand the known issues and limitations.
 
-## Search for IOCs - added support for searching IP address within Polylogyx event tables.
+## Search for IOCs - added support for searching IP address within EclecticIQ agent's event tables.
 
 ![IocSearchIP](Images/ioc-search-ip.png)   
    
@@ -123,11 +151,11 @@ This poses some bit of limitations if the Everything tool was installed outside 
    Any list view can be exported into a csv formatted data for further analysis.
    VirusTotal url links will also be exported for columns having hashes, domains or IPs.
 
-## Ability to Start/Stop/Restart Polylogyx agent via Tray menu. 
+## Ability to Start/Stop/Restart EclecticIQ agent services via Tray menu. 
    
 ![TrayNotificationConfig](Images/tray-notif-manage.png)
 
-   You can Start/Stop/Restart Polylogyx Agent services just by a click in Polylogyx Tray Icon menu options.
+   You can Start/Stop/Restart EclecticIQ Agent services just by a click in PolyMon Tray Icon menu options.
 
 ## Osquery service updated to version 4.5.0
 
@@ -172,23 +200,23 @@ Though the installer tries to cleanup all the files in case of failure, if it do
 
 Q: What is the osquery version bundled with PolyMon 
 
-Ans: The current release of PolyMon is bundled with osquery version 4.5.0
+Ans: The current release of PolyMon is bundled with osquery version 5.2.2
 
-Q. What is the version of PolyLogyx Extension bundled with PolyMon 
+Q. What is the version of EclecticIQ Extension bundled with PolyMon 
 
-Ans: The current release of PolyMon is bundled with PolyLogyx Extension version 1.0.40.4
+Ans: The current release of PolyMon is bundled with EclecticIQ Extension version 4.0.0.0
 
 Q. Can PolyMon be deployed, and monitored, through a central server? 
 
-Ans: No. PolyMon is meant for a single computer usage. For getting the same functionality across a fleet of endpoints to be managed centrally, use PolyLogyx ESP. 
+Ans: No. PolyMon is meant for a single computer usage. For getting the same functionality across a fleet of endpoints to be managed centrally, use [EclecticIQ ER](https://github.com/eclecticiq/eiq-er-ce) solution. 
 
 Q. Can PolyMon co-exist with osquery agent installed via other mechanism? 
 
-Ans: It can, as long as the other osquery agent is not using PolyLogy Extension at the same time. 
+Ans: It can, as long as the other osquery agent is not using EclecticIQ Extension at the same time. 
 
-Q. I only see some tabs filled with data while others are empty. Why?
+Q. I see some event tabs filled with data quicker than others. Why?
 
-Ans: The tool auto-populates the data for some event types (File, Process, Socket, DNS, DNS Response, SSL and Image Load). For other event tabs, the data is fetched by the push of "Refresh" button.
+Ans: The tool pre-populates the data for some event types (File, Process, Socket, DNS, DNS Response, SSL and Image Load). For other event tabs, the data is fetched on-demand.
 
 Q. Sometimes the UI hangs or shows 'Not responding'. Why?
 
@@ -197,10 +225,6 @@ Ans: This can happen if the query triggered is computing high volume of data. Wa
 Q. Can the tool work with a commercial VirusTotal API?
 
 Ans: It can but the tool would still maintain the lookup rate of a free API (i.e. 4 per minute).
-
-Q. Who is the publisher/owner of the tool? PolyLogyx or EclecticIQ?
-
-Ans: PolyLogyx (and all its technology products) are part of EclecticIQ. 
 
 Q. I have a feature request (or a bug to report). How do I do so?
 
