@@ -31,7 +31,7 @@ At the end of the installation, the monitoring agent registers as a tray app and
 
 ![tray-icon-4 0](https://user-images.githubusercontent.com/75771864/210521538-4dfacbd6-d919-4644-b777-ad93c2fb7626.png)
 
-![options_about-4 0](https://user-images.githubusercontent.com/75771864/210521577-27f9ff5b-ef17-4ce9-b45b-4547cde5b835.png)
+![options_about-4 0](https://user-images.githubusercontent.com/75771864/210773757-13a37508-184b-4e69-b94b-99e5bcf6f2be.png)
 
 # Configuration
 
@@ -83,26 +83,26 @@ The generated endpoint profile can be viewed as the HTML document.
 
 ![mon-profile-htm-4 0](https://user-images.githubusercontent.com/75771864/210522242-ef587901-f1c8-4d1c-b4ff-b5cb457de56b.png)
 
-# New features and enhancements in v4.0.0.0
+# v4.0.0.0 - features and enhancements 
 
 ## System health monitoring with health display via riskmeter 
 
 The tool constantly monitors system health based on a set of 15 parameters, shows health parameter status as "GOOD" or "NOT GOOD" and shows 
 an overall system health via riskmeter. 
 
-![health-monitor-4 0](https://user-images.githubusercontent.com/75771864/210519527-9fda9bd5-be6f-49d6-9c76-b1423aac6f80.JPG)
+![health-monitor-4 0](https://user-images.githubusercontent.com/75771864/210774262-377e6210-77ef-49d8-925e-ee388d6bfd83.JPG)
 
 It also allows for exporting system health report for further analysis. The health report data having 
 md5 hashes of files or services is highlighted in RED with VirusTotal hyperlink if the hash is found to be malicious via VirusTotal lookup.  
- 
-![health-monitor-htm-4 0](https://user-images.githubusercontent.com/75771864/210520334-97809ef4-e3f0-4e29-94b8-d1e97e191f8f.JPG)
+
+![health-monitor-htm-4 0](https://user-images.githubusercontent.com/75771864/210775376-d84c05ff-fc76-4146-b48c-2c51eb896f32.JPG)
 
 ## CIS benchmarking and reporting
   
 The tool can be used to do CIS benchmark analysis of the system on more than 500 benchmarks. Also, the benchmark report
 can be exported in csv format for further analysis.
 
-![cis-4 0](https://user-images.githubusercontent.com/75771864/210520691-14f10aa9-7d32-4b0c-86c0-960a704a40e0.JPG)
+![cis-4 0](https://user-images.githubusercontent.com/75771864/210775836-cb661dec-7461-4ba2-956b-cd4c785219ab.JPG)
    
 ## Osquery service updated to version 5.2.2
 
@@ -118,11 +118,11 @@ All tables (without constraints) recently added by osquery (supported only on Wi
 
 The tool is updated with EclecticIQ logo, license and copyright info. 
 
-# New features and enhancements in v1.0.40.6
+# v1.0.40.6 - features and enhancements 
 
 ## Integration with Everything tool (https://www.voidtools.com/) to enable Desktop Search for files and get file hashes.
 
-![desktop-search-temp](https://user-images.githubusercontent.com/75771864/210491464-03bc1d71-d4fc-4143-ae1f-df6620a9c419.PNG)
+![desktop-search-temp-4 0](https://user-images.githubusercontent.com/75771864/210776449-ff2f2858-74a2-4a98-bf08-83f9c3447236.PNG)
 
 PolyMon 1.0.40.6 comes integrated with the powerful desktop search engine **[Everything](https://www.voidtools.com/)**. 
 This strengthens PolyMon's endpoint investigation capabilities. Everything search engine can be accessed via "Desktop Search" tab in the PolyMon UI.
@@ -141,7 +141,7 @@ This poses some bit of limitations if the Everything tool was installed outside 
 
 ## Menu option to add/update VirusTotal key.
 
-![vt-key-update](https://user-images.githubusercontent.com/75771864/210491517-d19aaa03-56c8-4c3b-be0e-4f480c567695.png)
+![vt-key-update-4 0](https://user-images.githubusercontent.com/75771864/210777416-62fb6934-bbf3-40c6-a158-71173f33cec0.png)
 
    If you didnt opt to add VirusTotal key while installing previous version, no worries. 
    It can be updated now and will be activated immediately to fetch file hash reputations in File Events.
@@ -160,7 +160,7 @@ This poses some bit of limitations if the Everything tool was installed outside 
 
 ## Ability to Start/Stop/Restart EclecticIQ agent services via Tray menu. 
 
-![tray-notif-manage](https://user-images.githubusercontent.com/75771864/210491611-a1c64cfa-d5dd-4070-9594-0405125a867e.png)
+![tray-notif-manage-4 0](https://user-images.githubusercontent.com/75771864/210777754-b51c6864-ae8a-40a2-a595-f07c8e256dc6.png)
 
    You can Start/Stop/Restart EclecticIQ Agent services just by a click in PolyMon Tray Icon menu options.
 
@@ -170,13 +170,13 @@ This poses some bit of limitations if the Everything tool was installed outside 
 
 ## New tables added in osquery 4.5.0 added in dropdown list for "Other Tables"
 
-![osquery-table](https://user-images.githubusercontent.com/75771864/210491641-d88143d2-a55c-45f3-a1c2-4de8816eba85.png)
+![osquery-table-1 0 40 6](https://user-images.githubusercontent.com/75771864/210778161-2bd21fcd-5818-4b96-ad02-07c26fad65b4.png)
 
    All tables recently added by osquery (supported only on Windows) in 4.5.0 version have been updated in the list. 
 
 ## Endpoint Profile report enriched with host encryption and security status. 
 
-![mon-profile-htm](https://user-images.githubusercontent.com/75771864/210491671-33ea3bc4-ce18-435b-a557-c097c483b3f0.png)
+![mon-profile-htm-4 0](https://user-images.githubusercontent.com/75771864/210778805-09766161-ed23-416d-a437-1c9553d6cd3f.png)
    
 ## UI enhancements
 
@@ -187,7 +187,8 @@ This poses some bit of limitations if the Everything tool was installed outside 
 - List view columns with hash, domain or IP are clickable links to VirusTotal page for reputation details. 
 - Rebranding with EclecticIQ company logo
 - Show/Hide columns in list view on right click list view's top row having column names
-![hide-columns](https://user-images.githubusercontent.com/75771864/210491732-04c5c123-9542-4ec0-8f68-37d4748b2d28.png)
+
+![hide-columns-4 0](https://user-images.githubusercontent.com/75771864/210779409-6e610ceb-e692-45da-a829-3561c9439101.png)
 
 # Uninstalling PolyMon
 
