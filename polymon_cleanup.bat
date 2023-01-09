@@ -136,6 +136,7 @@ wevtutil cl PlgxRealTimeYaraEvents/Log >nul 2>&1
 wevtutil cl PlgxRealTimeLogEvents/Log >nul 2>&1
 wevtutil cl PlgxRealTimeFileTimestompEvents/Log >nul 2>&1
 wevtutil cl PlgxRealTimePefileEvents/Log >nul 2>&1
+wevtutil cl PlgxRealTimeEvents/Log >nul 2>&1
 wevtutil um "%ProgramFiles%\plgx_osquery\PolyEvents.man" >nul 2>&1
 
 REM Clean up installation folder
@@ -148,8 +149,8 @@ REM clean up registries
 reg delete HKEY_LOCAL_MACHINE\SOFTWARE\PlgxAgentUI /f >nul 2>&1
 
 REM cleanup shortcuts
-del /F /S /Q "%PUBLIC%\Desktop\Polylogyx Agent.lnk" >nul 2>&1
-del /F /S /Q "%ProgramData%\Microsoft\Windows\Start Menu\Programs\ApplicationPrograms\Polylogyx Agent.lnk" >nul 2>&1
+del /F /S /Q "%PUBLIC%\Desktop\EclecticIQ PolyMon.lnk" >nul 2>&1
+del /F /S /Q "%ProgramData%\Microsoft\Windows\Start Menu\Programs\EclecticIQ PolyMon\EclecticIQ PolyMon.lnk" >nul 2>&1
 
 REM delete scheduled task
 SCHTASKS.exe /Delete /TN "PlgxMonAgentStart" /F >nul 2>&1
